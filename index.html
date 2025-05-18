@@ -2,42 +2,50 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sug4D Login</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sug4D</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header {
+      background: #222;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      height: 40px;
+      cursor: pointer;
+    }
+    nav {
+      margin-left: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="logo-sug4d.png" alt="Sug4D Logo" class="logo" />
-    <h1 class="brand">Sug4D</h1>
 
-    <div class="form-wrapper">
-      <form id="login-form" class="form active">
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Masuk</button>
-      </form>
+<header>
+  <!-- Logo clickable, klik akan kembali ke index.html -->
+  <a href="index.html">
+    <img src="logo-sug4d.png" alt="Logo Sug4D" class="logo" />
+  </a>
 
-      <form id="register-form" class="form">
-        <input type="text" placeholder="Username" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Daftar</button>
-      </form>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-      <div class="switch">
-        <button onclick="showForm('login')">Login</button>
-        <button onclick="showForm('register')">Daftar</button>
-      </div>
-    </div>
-  </div>
+<main>
+  <h1>Selamat datang di Sug4D!</h1>
+  <p>Ini halaman utama.</p>
+</main>
 
-  <script>
-    function showForm(formId) {
-      document.getElementById('login-form').classList.remove('active');
-      document.getElementById('register-form').classList.remove('active');
-      document.getElementById(formId + '-form').classList.add('active');
-    }
-  </script>
 </body>
 </html>
