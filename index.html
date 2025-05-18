@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sug4D Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="logo-sug4d.png" alt="Sug4D Logo" class="logo" />
+    <h1 class="brand">Sug4D</h1>
+
+    <div class="form-wrapper">
+      <form id="login-form" class="form active">
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button type="submit">Masuk</button>
+      </form>
+
+      <form id="register-form" class="form">
+        <input type="text" placeholder="Username" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button type="submit">Daftar</button>
+      </form>
+
+      <div class="switch">
+        <button onclick="showForm('login')">Login</button>
+        <button onclick="showForm('register')">Daftar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showForm(formId) {
+      document.getElementById('login-form').classList.remove('active');
+      document.getElementById('register-form').classList.remove('active');
+      document.getElementById(formId + '-form').classList.add('active');
+    }
+  </script>
+</body>
+</html>
